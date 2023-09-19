@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>registration</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+</head>
+<center>
+<body style="background-color:teal; color:black">
+<form  method="post" action="">
+    <h2>REGISTRATION PAGE</h2>
+   {% csrf_token %}
+
+    <label>USERNAME </label> <br> <input  type="text" name="username"><br><br><br>
+    <label>FIRSTNAME</label> <br> <input  type="text" name="fname"><br><br><br>
+    <label>LASTNAME </label> <br> <input  type="text" name="lname"><br><br><br>
+    <label>EMAIL </label> <br> <input  type="email" name="email"><br><br><br>
+    <label>PASSWORD </label> <br> <input  type="password" name="pass"><br><br><br>
+    <label>CONFIRM </label> <br> <input  type="password" name="cpass"><br><br><br>
+      <input type="submit">
+
+
+</form>
+{% for msg in messages %}
+{{msg}}
+{% endfor %}
+
+</body>
+</html>
